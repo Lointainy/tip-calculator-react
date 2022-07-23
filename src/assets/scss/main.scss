@@ -1,6 +1,18 @@
+@import 'reset/reset'; // reset style
+
+// basic
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
 body {
   margin: 0;
-  padding: 0;
-  color: #ffffff;
-  background-color: #000000;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
 }
