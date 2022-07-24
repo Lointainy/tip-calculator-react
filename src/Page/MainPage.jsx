@@ -1,11 +1,19 @@
 import CalculatorField from '@/components/CalculatorField'
 import SummaryField from '@/components/SummaryField'
+import './MainPage.scss'
 
 const MainPage = () => {
   return (
-    <div className="main-page">
-      <CalculatorField />
-      <SummaryField />
+    <div className="main">
+      <div className="logo">
+        spli
+        <br />
+        tter
+      </div>
+      <div className="main-content">
+        <CalculatorField />
+        <SummaryField />
+      </div>
     </div>
   )
 }
