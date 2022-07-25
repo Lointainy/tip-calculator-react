@@ -4,11 +4,11 @@
   @each $name, $value in $grid-bp {
     @media (min-width: $value) {
       @if $name == xxl {
-        padding: 0 calc(50% - #{calc(($container-mw) / 2)});
+        margin: 0 calc(50% - #{calc(($container-mw) / 2)});
       } @else if $value == 0 {
-        padding: 0 $grid-space-side;
+        margin: 0 $grid-space-side;
       } @else {
-        padding: 0 calc(50% - #{calc(($value) / 2)} +$grid-space-side);
+        margin: 0 calc(50% - #{calc(($value) / 2)} +$grid-space-side);
       }
     }
   }
@@ -16,5 +16,6 @@
 
 @mixin container-width($value) {
   $value: map-get($container-value, $value);
+
   max-width: $value;
 } // container width

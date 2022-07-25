@@ -1,0 +1,108 @@
+/* summary-field */
+.summary-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: $column-width;
+  padding: 2.5rem;
+  background-color: $color-deep-jungle-green;
+  border-radius: 1.5625rem;
+
+  @include media(lg, mx) {
+    width: 100%;
+  }
+
+  &__amount {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.125rem;
+
+    &-heading {
+      @include mediaWidth(400px, mx) {
+        width: 100%;
+      }
+
+      .amount-title {
+        margin-bottom: 0.075rem;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        color: $color-white;
+      }
+
+      .amount-subtitle {
+        font-weight: 700;
+        font-size: 0.8125rem;
+        color: $color-weldon-blue;
+      }
+    }
+
+    &-number {
+      font-weight: 700;
+      font-size: 3rem;
+      color: $color-light-sea-green;
+      letter-spacing: -0.0625rem;
+    }
+  }
+
+  &__total {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.125rem;
+
+    &-heading {
+      @include mediaWidth(400px, mx) {
+        width: 100%;
+      }
+
+      .total-title {
+        margin-bottom: 0.075rem;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        color: $color-white;
+      }
+
+      .total-subtitle {
+        font-weight: 700;
+        font-size: 0.8125rem;
+        color: $color-weldon-blue;
+      }
+    }
+
+    &-number {
+      font-weight: 700;
+      font-size: 3rem;
+      color: $color-light-sea-green;
+      letter-spacing: -0.0625rem;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: $color-deep-jungle-green;
+    text-transform: uppercase;
+    background-color: $color-light-sea-green;
+    border-radius: $border-radius-button;
+    cursor: pointer;
+    transition: $transition-background;
+
+    &:hover {
+      background-color: $color-crystal;
+    }
+
+    &:disabled {
+      background-color: $color-skobeloff;
+      cursor: default;
+    }
+  }
+}

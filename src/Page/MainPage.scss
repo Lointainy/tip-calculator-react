@@ -1,0 +1,32 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: $color-deep-space-sparkle;
+  text-transform: uppercase;
+  letter-spacing: 0.625rem;
+}
+
+.main-content {
+  display: flex;
+
+  @include container;
+
+  min-width: 57.5rem;
+  padding: 2rem;
+  background-color: $color-white;
+  border-radius: $border-radius;
+  gap: 3rem;
+
+  @include media(lg, mx) {
+    flex-wrap: wrap;
+    min-width: 0;
+    width: 100%;
+    gap: 0;
+  }
+}

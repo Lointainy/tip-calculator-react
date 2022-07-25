@@ -1,6 +1,11 @@
+import MainPage from './Page/MainPage'
+
 const App = () => {
-  const str = 'str'
-  return <div className="App">lorem</div>
+  return (
+    <div className="App">
+      <MainPage />
+    </div>
+  )
 }
 
 export default App
