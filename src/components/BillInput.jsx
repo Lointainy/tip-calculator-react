@@ -9,13 +9,13 @@ export const BillInput = ({ bill }) => {
     <div className="bill">
       <h1 className="bill__title">
         Bill
-        {bill == 0 ? <span className="error-title">Can’t be zero</span> : ''}
+        {bill !== '' && bill == 0 ? <span className="error-title">Can’t be zero</span> : ''}
       </h1>
       <div className="bill__input-container" htmlFor="bill">
         <input
           value={bill}
           onChange={(event) => handleChange(event)}
-          className={bill == 0 ? 'bill__input error-input' : 'bill__input'}
+          className={bill !== '' && bill == 0 ? 'bill__input error-input' : 'bill__input'}
           name="bill"
           type="number"
           min="0"
