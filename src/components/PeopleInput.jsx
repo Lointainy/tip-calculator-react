@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { CustomContext } from '../hooks/Context'
+import peopleIcon from '../assets/img/CombinedShape.svg'
 //style
 import './PeopleInput.scss'
 
@@ -22,7 +23,7 @@ export const PeopleInput = ({ people }) => {
           min="0"
           placeholder="0"
         />
-        <img src="src/assets/img/CombinedShape.svg" alt="" className="people__input-icon" />
+        <img src={peopleIcon} alt="" className="people__input-icon" />
       </div>
     </div>
   )
