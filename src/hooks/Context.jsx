@@ -26,30 +26,22 @@ export const Context = (props) => {
     })
   }
 
+  console.log(state.bill)
+
   const tipResult = useEffect(() => {
-    if (state.bill !== '' && state.tip !== '' && state.people !== '' && state.bill / state.tip !== Infinity) {
-      setState({
-        ...state,
-        tipAmount: (state.bill * (state.tip / 100)) / state.people,
-      })
-    } else
-      setState({
-        ...state,
-        tipAmount: 0,
-      })
+    let x = (state.bill * (state.tip / 100)) / state.people
+    setState({
+      ...state,
+      tipAmount: x > 0 && x != Infinity ? x : 0,
+    })
   }, [state.bill, state.tip, state.people])
 
   const totalResult = useEffect(() => {
-    if (state.bill !== '' && state.tip !== '' && state.people !== '' && state.bill / state.tip !== Infinity) {
-      setState({
-        ...state,
-        total: state.bill / state.people + state.tipAmount,
-      })
-    } else
-      setState({
-        ...state,
-        total: 0,
-      })
+    let x = state.bill / state.people + state.tipAmount
+    setState({
+      ...state,
+      total: x > 0 && x != Infinity ? x : 0,
+    })
   }, [state.tipAmount])
 
   const value = {
