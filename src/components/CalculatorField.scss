@@ -1,0 +1,8 @@
+/* CALCULATOR */
+.calculator-field {
+  width: $column-width;
+
+  @include media(lg, mx) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,46 @@
+/* Colors */
+
+$color-white: #ffffff;
+//subtitle color
+$color-weldon-blue: #7f9d9f;
+//icon color
+$color-opal: #9ebbbd;
+//input, btn font color; field background
+$color-deep-jungle-green: #00474b;
+//placegolder input color
+$color-dark-electric-blue: #547878;
+//title
+$color-wintergreen-dream: #5e7a7d;
+//input
+$color-alice-blue: #f3f9fa;
+//background
+$color-columbia-blue: #c5e4e7;
+//logo
+$color-deep-space-sparkle: #3d6666;
+//active - focus - btn color
+$color-light-sea-green: #26c2ae;
+//hover color
+$color-crystal: #9fe8df;
+//disabled color
+$color-skobeloff: #0d686d;
+//error color
+$color-burnt-sienna: #e17052;
+
+/* Border  */
+
+$border-radius: 1.625rem;
+$border-radius-button: 0.3125rem;
+
+/* other */
+
+$transition-background: background-color ease-in 0.2s;
+
+// for the main field elements
+$column-count: 2;
+$column-gap: 1.5rem;
+$column-width: calc((100% / $column-count) - $column-gap);
+
+//for the til input:radio
+@mixin item-width($item-count, $item-gap) {
+  flex-basis: calc(math.div(100%, $item-count) - $item-gap);
+}

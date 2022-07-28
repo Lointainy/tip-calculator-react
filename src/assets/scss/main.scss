@@ -1,6 +1,44 @@
+@import 'reset/reset'; // reset style
+
+// basic
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
 body {
   margin: 0;
-  padding: 0;
-  color: #ffffff;
-  background-color: #000000;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: $color-columbia-blue;
+}
+
+// hidden arrow for input:number
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+input[type='number'] {
+  appearance: textfield;
+}
+
+.error-title {
+  color: $color-burnt-sienna;
+}
+
+.error-input {
+  color: $color-burnt-sienna;
+  outline: 0.125rem $color-burnt-sienna solid;
+
+  &:focus {
+    color: $color-burnt-sienna;
+    outline: 0.125rem $color-burnt-sienna solid;
+  }
 }

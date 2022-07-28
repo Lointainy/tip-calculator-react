@@ -1,6 +1,12 @@
-const App = () => {
-  const str = 'str'
-  return <div className="App">lorem</div>
-}
+import { Context } from './hooks/Context'
+import { MainPage } from './Page/MainPage'
 
-export default App
+export const App = () => {
+  return (
+    <Context>
+      <div className="App">
+        <MainPage />
+      </div>
+    </Context>
+  )
+}
