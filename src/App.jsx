@@ -1,11 +1,12 @@
-import MainPage from './Page/MainPage'
+import { Context } from './hooks/Context'
+import { MainPage } from './Page/MainPage'
 
-const App = () => {
+export const App = () => {
   return (
-    <div className="App">
-      <MainPage />
-    </div>
+    <Context>
+      <div className="App">
+        <MainPage />
+      </div>
+    </Context>
   )
 }
-
-export default App

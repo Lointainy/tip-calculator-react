@@ -1,8 +1,8 @@
-import CalculatorField from '@/components/CalculatorField'
-import SummaryField from '@/components/SummaryField'
+import { CalculatorField } from '@/components/CalculatorField'
+import { SummaryField } from '@/components/SummaryField'
 import './MainPage.scss'
 
-const MainPage = () => {
+export const MainPage = () => {
   return (
     <div className="main">
       <div className="logo">
@@ -17,5 +17,3 @@ const MainPage = () => {
     </div>
   )
 }
-
-export default MainPage
