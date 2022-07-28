@@ -21,7 +21,7 @@ export const SummaryField = () => {
         </div>
         <div className="summary-field__total-number">${state.total.toFixed(1)}</div>
       </div>
-      <button onClick={handleReset} className="summary-field__btn">
+      <button disabled={state.tipAmount <= 0 || state.total <= 0} onClick={handleReset} className="summary-field__btn">
         reset
       </button>
     </div>
