@@ -1,17 +1,21 @@
-import BillInput from './BillInput'
-import TipInput from './TipInput'
-import PeopleInput from './PeopleInput'
+import { useContext } from 'react'
+import { CustomContext } from '../hooks/Context'
 
+//components
+import { BillInput } from './BillInput'
+import { TipInput } from './TipInput'
+import { PeopleInput } from './PeopleInput'
+
+//style
 import './CalculatorField.scss'
 
-const CalculatorField = () => {
+export const CalculatorField = () => {
+  const { state } = useContext(CustomContext)
   return (
     <div className="calculator-field">
-      <BillInput />
-      <TipInput />
-      <PeopleInput />
+      <BillInput bill={state.bill} />
+      <TipInput tip={state.tip} />
+      <PeopleInput people={state.people} />
     </div>
   )
 }
-
-export default CalculatorField
