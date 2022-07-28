@@ -16,7 +16,7 @@ export const PeopleInput = ({ people }) => {
         <input
           value={people}
           onChange={(event) => handleChange(event)}
-          className="people__input"
+          className={people == 0 ? 'people__input error-input' : 'people__input'}
           name="people"
           type="number"
           min="0"

@@ -15,7 +15,7 @@ export const BillInput = ({ bill }) => {
         <input
           value={bill}
           onChange={(event) => handleChange(event)}
-          className="bill__input"
+          className={bill == 0 ? 'bill__input error-input' : 'bill__input'}
           name="bill"
           type="number"
           min="0"
