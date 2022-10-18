@@ -1,11 +1,16 @@
-import { useState, useContext } from 'react'
-import { CustomContext } from '../hooks/Context'
-//style
+/* Context */
+import { useContextState } from '../hooks/Context'
+
+/* Style */
 import './TipInput.scss'
 
-export const TipInput = ({ tip }) => {
-  const { handleChange, state } = useContext(CustomContext)
-  const [percentage, setPercentage] = useState([5, 10, 15, 25, 50])
+/* Types */
+type Props = {
+  tip: number | string
+}
+const TipInput: React.FC<Props> = ({ tip }) => {
+  const { handleChange } = useContextState()
+  const percentage: number[] = [5, 10, 15, 25, 50]
 
   return (
     <div className="tip">
@@ -45,3 +50,5 @@ export const TipInput = ({ tip }) => {
     </div>
   )
 }
+
+export default TipInput

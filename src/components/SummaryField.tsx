@@ -1,10 +1,11 @@
-import { useContext } from 'react'
-import { CustomContext } from '../hooks/Context'
-//style
+/* Context */
+import { useContextState } from '../hooks/Context'
+
+/* Style */
 import './SummaryField.scss'
 
-export const SummaryField = () => {
-  const { state, handleReset } = useContext(CustomContext)
+const SummaryField = () => {
+  const { state, handleReset } = useContextState()
   return (
     <div className="summary-field">
       <div className="summary-field__amount">
@@ -27,3 +28,5 @@ export const SummaryField = () => {
     </div>
   )
 }
+
+export default SummaryField
