@@ -44,6 +44,7 @@ Your [challenge](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJ
   - Hooks
   - - useEffect
   - - useContext
+- Typescript
 - Vite
   - create basic config
   - connect assets
