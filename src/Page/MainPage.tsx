@@ -4,7 +4,7 @@ import { CalculatorField, SummaryField } from '@/components/'
 /* Style */
 import './MainPage.scss'
 
-export const MainPage = () => {
+export const MainPage: React.FC = () => {
   return (
     <div className="main">
       <div className="logo">

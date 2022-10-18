@@ -1,15 +1,15 @@
-/* Store */
-import { Context } from './hooks/Context'
+/* Context */
+import ContextProvider from './hooks/Context'
 
 /* Page */
 import { MainPage } from './Page/MainPage'
 
-export const App = () => {
+export const App: React.FC = () => {
   return (
-    <Context>
+    <ContextProvider>
       <div className="App">
         <MainPage />
       </div>
-    </Context>
+    </ContextProvider>
   )
 }

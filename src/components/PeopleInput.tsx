@@ -1,23 +1,27 @@
-/* Store */
-import { useContext } from 'react'
-import { CustomContext } from '../hooks/Context'
+/* Context */
+import { useContextState } from '../hooks/Context'
 
 /* Icons */
 import peopleIcon from '../assets/img/CombinedShape.svg'
 
-//style
+/* Style */
 import './PeopleInput.scss'
 
-const PeopleInput = ({ people }) => {
-  const { handleChange } = useContext(CustomContext)
+/* Types */
+type Props = {
+  people: number | string
+}
+
+const PeopleInput: React.FC<Props> = ({ people }) => {
+  const { handleChange } = useContextState()
 
   return (
     <div className="people">
       <div className="people__title">
         Number of People
-        {people !== '' && people == 0 ? <span className="error-title">Can’t be zero</span> : ''}
+        {people == '' || people == 0 ? <span className="error-title">Can’t be zero</span> : ''}
       </div>
-      <div className="people__input-container" htmlFor="bill">
+      <div className="people__input-container" data-htmlfor="bill">
         <input
           value={people}
           onChange={(event) => handleChange(event)}
