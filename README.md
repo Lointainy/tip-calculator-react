@@ -52,7 +52,7 @@ Your [challenge](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJ
 
 ![complete](https://img.shields.io/badge/project_created:-22.07.2022-333?style=for-the-badge&labelColor=e7901f)
 
-![update](https://img.shields.io/badge/last_update:-28.07.22-333?style=for-the-badge&labelColor=1fe783)
+![update](https://img.shields.io/badge/last_update:-18.10.22-333?style=for-the-badge&labelColor=1fe783)
 
 ###### Author
 
