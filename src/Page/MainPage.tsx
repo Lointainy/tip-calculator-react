@@ -1,5 +1,7 @@
-import { CalculatorField } from '@/components/CalculatorField'
-import { SummaryField } from '@/components/SummaryField'
+/* Components */
+import { CalculatorField, SummaryField } from '@/components/'
+
+/* Style */
 import './MainPage.scss'
 
 export const MainPage = () => {

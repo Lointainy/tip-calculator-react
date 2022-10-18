@@ -1,9 +1,11 @@
+/* Store */
 import { useContext } from 'react'
 import { CustomContext } from '../hooks/Context'
-//style
+
+/* Style */
 import './BillInput.scss'
 
-export const BillInput = ({ bill }) => {
+const BillInput = ({ bill }) => {
   const { handleChange } = useContext(CustomContext)
   return (
     <div className="bill">
@@ -26,3 +28,5 @@ export const BillInput = ({ bill }) => {
     </div>
   )
 }
+
+export default BillInput

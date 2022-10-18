@@ -1,4 +1,7 @@
+/* Store */
 import { Context } from './hooks/Context'
+
+/* Page */
 import { MainPage } from './Page/MainPage'
 
 export const App = () => {

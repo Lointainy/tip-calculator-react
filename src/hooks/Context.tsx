@@ -1,8 +1,8 @@
-import { useState, createContext, useEffect } from 'react'
+import { createContext, useEffect, useState } from 'react'
 
 export const CustomContext = createContext()
 
-export const Context = (props) => {
+export const Context = ({ children }) => {
   const [state, setState] = useState({
     bill: '',
     tip: '',
@@ -51,5 +51,5 @@ export const Context = (props) => {
     handleReset,
   }
 
-  return <CustomContext.Provider value={value}>{props.children}</CustomContext.Provider>
+  return <CustomContext.Provider value={value}>{children}</CustomContext.Provider>
 }

@@ -1,15 +1,14 @@
+/* Store */
 import { useContext } from 'react'
 import { CustomContext } from '../hooks/Context'
 
-//components
-import { BillInput } from './BillInput'
-import { TipInput } from './TipInput'
-import { PeopleInput } from './PeopleInput'
+/* Components */
+import { BillInput, PeopleInput, TipInput } from './'
 
-//style
+/* Style */
 import './CalculatorField.scss'
 
-export const CalculatorField = () => {
+const CalculatorField = () => {
   const { state } = useContext(CustomContext)
   return (
     <div className="calculator-field">
@@ -19,3 +18,5 @@ export const CalculatorField = () => {
     </div>
   )
 }
+
+export default CalculatorField

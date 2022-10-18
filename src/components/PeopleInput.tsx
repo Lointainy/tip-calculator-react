@@ -1,10 +1,14 @@
+/* Store */
 import { useContext } from 'react'
 import { CustomContext } from '../hooks/Context'
+
+/* Icons */
 import peopleIcon from '../assets/img/CombinedShape.svg'
+
 //style
 import './PeopleInput.scss'
 
-export const PeopleInput = ({ people }) => {
+const PeopleInput = ({ people }) => {
   const { handleChange } = useContext(CustomContext)
 
   return (
@@ -28,3 +32,5 @@ export const PeopleInput = ({ people }) => {
     </div>
   )
 }
+
+export default PeopleInput
