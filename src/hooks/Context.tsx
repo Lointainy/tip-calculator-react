@@ -1,42 +1,47 @@
-import { createContext, useEffect, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 
-export const CustomContext = createContext()
+/* Types */
+import { ContextType } from '@/types/context.type'
 
-export const Context = ({ children }) => {
+type ContextProviderProps = {
+  children: React.ReactNode
+}
+
+const Context = createContext<ContextType>({} as ContextType)
+
+const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [state, setState] = useState({
-    bill: '',
-    tip: '',
-    people: '',
+    bill: 0,
+    tip: 0,
+    people: 0,
     tipAmount: 0,
     total: 0,
   })
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setState({ ...state, [event.target.name]: event.target.value })
   }
 
   const handleReset = () => {
     setState({
       ...state,
-      bill: '',
-      tip: '',
-      people: '',
+      bill: 0,
+      tip: 0,
+      people: 0,
       tipAmount: 0,
       total: 0,
     })
   }
 
-  console.log(state.bill)
-
-  const tipResult = useEffect(() => {
-    let x = (state.bill * (state.tip / 100)) / state.people
+  useEffect(() => {
+    let x: number = Number((state.bill * (state.tip / 100)) / state.people)
     setState({
       ...state,
       tipAmount: x > 0 && x != Infinity ? x : 0,
     })
   }, [state.bill, state.tip, state.people])
 
-  const totalResult = useEffect(() => {
+  useEffect(() => {
     let x = state.bill / state.people + state.tipAmount
     setState({
       ...state,
@@ -51,5 +56,8 @@ export const Context = ({ children }) => {
     handleReset,
   }
 
-  return <CustomContext.Provider value={value}>{children}</CustomContext.Provider>
+  return <Context.Provider value={value}>{children}</Context.Provider>
 }
+
+export default ContextProvider
+export const useContextState = () => React.useContext(Context)
